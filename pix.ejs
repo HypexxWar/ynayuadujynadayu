@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pagamento Pix</title>
+
+<style>
+body {
+    background: #0a0015;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+.box {
+    margin-top: 50px;
+}
+
+img {
+    margin: 20px;
+    width: 250px;
+}
+
+button {
+    padding: 11px;
+    border: none;
+    background: purple;
+    color: white;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+<h1>Pagamento!</h1>
+
+<p>Nick: <b><%= nickname %></b></p>
+<p>Produto: <b><%= product %></b></p>
+<p>Valor: <b>R$<%= price %></b></p>
+<P> QUANDO O PIX FOR CONCLUIDO, MANDE A PROVA DE PAGAMENTO NO DISCORD "TICKET DE COMPRAS"</P>
+
+<a class="btn" href="https://discord.com/channels/1496308015400357970/1496337502175498310" target="_blank"> CLIQUE AQUI PARA MANDAR O COMPROVANTE DO PIX (CRIE UM TICKET DE  COMPRAS)</a>
+
+<p>Ou copie o código:</p>
+
+<input type="text" value="00020126580014BR.GOV.BCB.PIX0136315b2f2a-9c70-43e3-b79a-af95302664bb5204000053039865802BR5925Miguel Luiz Nery da Silva6009SAO PAULO62140510RPK0OEZxRS6304A793" id="pixCode" readonly>
+
+<button onclick="copiar()">Copiar Código</button>
+
+
+</div>
+
+<script>
+function copiar() {
+    const copyText = document.getElementById("pixCode");
+    copyText.select();
+    document.execCommand("copy");
+    alert("Copiado!");
+}
+</script>
+
+</body>
+</html>

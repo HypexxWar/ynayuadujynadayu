@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Kria MC - Loja</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0a0015, #1a0033);
+    color: white;
+}
+
+/* TOPO */
+header {
+    background: #14002a;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px purple;
+}
+
+header h1 {
+    margin: 0;
+    color: #c77dff;
+    text-shadow: 0 0 15px #a855f7;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* INPUT */
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #120024;
+    border-radius: 15px;
+    padding: 25px;
+    width: 220px;
+    box-shadow: 0 0 20px #7b2cbf;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #c77dff;
+}
+
+/* TITULO CARD */
+.card h2 {
+    color: #c77dff;
+}
+
+/* PREÇO */
+.price {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+/* RADIO */
+.card input {
+    margin-top: 10px;
+}
+
+/* BOTÃO */
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background: #7b2cbf;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #9d4edd;
+    box-shadow: 0 0 15px #c77dff;
+}
+
+/* PIX BOX */
+.pix-box {
+    margin-top: 30px;
+    background: #1a0033;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px purple;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>The Kria MC - Loja Oficial</h1>
+</header>
+
+<div class="container">
+
+<form action="/confirmar-pagamento" method="POST">
+
+    <input name="nickname" placeholder="Digite seu nick" required>
+
+    <div class="cards">
+
+        <DIV
+            class="card">
+            <h2>VIP PRATA</h2>
+            <p>Benefícios exclusivos</p>
+            <div class="price">R$5</div>
+            <input type="radio" name="product" value="VIP Prata" required> (MELHOR PRA INICIAR)
+        </DIV>
+        <div class="card">
+            <h2>VIP OURO</h2>
+            <p>Benefícios exclusivos</p>
+            <div class="price">R$10</div>
+            <input type="radio" name="product" value="VIP Ouro" required> (MELHOR CUSTO-BENEFÍCIO)
+        </div>
+
+        <div class="card">
+            <h2>VIP DIAMANTE</h2>
+            <p>Benefícios exclusivos</p>
+            <div class="price">R$20</div>
+            <input type="radio" name="product" value="VIP Diamante" required>(EM BREVE)
+        </div>
+
+        <div class="card">
+            <h2>VIP RUBI</h2>
+            <p>Benefícios exclusivos</p>
+            <div class="price">R$30</div>
+            <input type="radio" name="product" value="VIP Rubi" required>(EM BREVE)
+        </div>
+
+        <div class="card">
+            <h2>VIP ESMERALDA</h2>
+            <p>Benefícios exclusivos</p>
+            <div class="price">R$40</div>
+            <input type="radio" name="product" value="VIP Esmeralda" required>(EM BREVE)
+        </div>
+
+        <div class="card">
+            <h2>VIP SAFIRA</h2>
+            <p>Benefícios exclusivos</p>
+            <div class="price">R$50</div>
+            <input type="radio" name="product" value="VIP Safira" required> (EM BREVE)
+        </div>
+
+    </div>
+
+    <div class="pix-box">
+        <h3>💰 Pagamento via Pix</h3>
+        <p>Chave Pix:</p>
+        <b>thekriamc@gmail.com</b>
+        <p>Após pagar, clique abaixo</p>
+    </div>
+
+    <button type="submit">Confirmar Compra</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
